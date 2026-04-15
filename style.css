@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=National+Park:wght@200..800&family=New+Rocker&display=swap");
+body {
+  min-height: 100vh;
+  background-size: 100% 100%, cover;
+  background-image: linear-gradient(130deg, hsla(35, 100%, 10%, 0.875), hsla(35, 100%, 30%, 0.875)), url("images/home-image.png");
+  background-repeat: no-repeat;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figcaption,
+button,
+nav a {
+  font-family: "National Park", sans-serif;
+  text-shadow: 1px 1px 2px black;
+}
+
+div.card {
+  background: -webkit-gradient(linear, right top, left top, from(hsla(205, 70%, 20%, 0.79)), to(hsla(205, 70%, 30%, 0.79)));
+  background: linear-gradient(-90deg, hsla(205, 70%, 20%, 0.79), hsla(205, 70%, 30%, 0.79));
+}
+div.card * {
+  text-shadow: 0px 0px 0px white;
+  color: hsl(35, 50%, 15%) !important;
+  color: hsl(215, 100%, 97%) !important;
+}
+div.card p, div.card figcaption, div.card h1, div.card h2, div.card h3 {
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.navbar {
+  width: 50%;
+  margin: 0 auto;
+  width: 100%;
+}
+.navbar a {
+  font-size: 3vw;
+  color: white;
+  text-decoration: none;
+  text-align: right;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px black;
+}
+.navbar a.nav-active {
+  color: hsl(35, 100%, 30%);
+}
+
+@media screen and (max-width: 700px) and (min-width: 0px) {
+  h1, h2, h3, h4 {
+    font-size: 10vw;
+  }
+  div.card h1, div.card h2, div.card h3, div.card h4 {
+    font-size: 8vw;
+  }
+  p {
+    font-size: 4vw;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 1500px) {
+  h1 {
+    font-size: 10vw;
+  }
+  h2, h3, h4 {
+    font-size: 5vw;
+  }
+  p {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 1501px) {
+  .card {
+    padding: 1vw 2vw;
+  }
+  p {
+    font-size: 2.5vw;
+  }
+}
+.card {
+  padding: 1vw 2vw;
+}
+
+h1.band-name,
+h1.page-title {
+  font-size: 10vw;
+  color: white;
+  color: hsl(35, 50%, 15%);
+  color: hsl(215, 100%, 97%);
+  font-weight: 400;
+  font-style: normal;
+}
+
+.home-page h2 {
+  font-size: 3vw;
+}
+
+.home-about-content {
+  color: white;
+}
+
+.contact-form input, .contact-form label, .contact-form textarea {
+  width: 100%;
+  display: block;
+}
+.contact-form input, .contact-form textarea, .contact-form button {
+  padding: 0.125rem 0.25rem;
+  margin-bottom: 1rem;
+  text-shadow: none;
+}
+.contact-form button {
+  padding: 0.125rem 1rem;
+  font-weight: 600;
+  background-color: hsl(35, 100%, 10%);
+  color: white;
+}

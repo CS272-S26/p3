@@ -1,0 +1,156 @@
+//@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=New+Rocker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=National+Park:wght@200..800&family=New+Rocker&display=swap');
+$primary: hsl(35, 100%, 10%);
+$secondary: hsl(35, 100%, 30%);
+$accent: hsl(205, 100%, 30%);
+$dark: hsl(35, 50%,15%);
+$light: hsl(215, 100%, 97%);
+
+body {
+  min-height: 100vh;
+  //linear-gradient(10deg, blue 50%, green 100%)
+;
+  background-size: 100% 100%, cover;
+  background-image:
+          linear-gradient(130deg, transparentize($primary, .125), transparentize($secondary, .125))
+          ,url("images/home-image.png")
+;
+  //url("images/home-image.png");
+  background-repeat: no-repeat;
+
+  main {
+    //border: 2px solid green;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+*,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figcaption,
+button,
+nav a {
+  font-family: "National Park", sans-serif;
+  text-shadow: 1px 1px 2px black;
+}
+div.card {
+  background: linear-gradient(-90deg, hsla(205, 70%, 20%, .79), hsla(205, 70%, 30%, .79));
+  * {
+    text-shadow: 0px 0px 0px white;
+    color: $dark!important;
+    color: $light!important;
+  }
+  p, figcaption, h1, h2, h3 {
+    letter-spacing: 1.5px;
+    font-weight: 600;
+  }
+}
+
+.navbar {
+    width: 50%;
+    margin: 0 auto;
+    width: 100%;
+  a {
+    //font-size: 1.5rem;
+    font-size: 3vw;
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    font-weight: 600;
+    //text-shadow: black;
+    text-shadow: 1px 1px 2px black;
+
+    &.nav-active {
+      color: $secondary;
+    }
+
+  }
+}
+
+
+@media screen and (max-width: 700px) and (min-width: 0px ){
+  h1, h2, h3, h4 {
+    font-size: 10vw;
+    div.card & {
+      font-size: 8vw;
+    }
+  }
+  p {
+    //font-size: 1.25rem;
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 701px ) and (max-width: 1500px) {
+  h1 {
+    font-size: 10vw;
+  }
+  h2, h3, h4 {
+    font-size: 5vw;
+  }
+  p {
+    //color: orange;
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 1501px ) {
+  .card {
+    padding: 1vw 2vw;
+  }
+  p {
+    //color: orange;
+    font-size: 2.5vw;
+  }
+}
+
+.card {
+  padding: 1vw 2vw;
+}
+
+h1.band-name,
+h1.page-title
+{
+  //margin-top: 1rem;
+  font-size: 10vw;
+  color: white;
+  color: $dark;
+  color: $light;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.home-page {
+  h2 {
+    font-size: 3vw;
+    //padding: 2vw;
+  }
+}
+.home-about-content {
+  color: white;
+}
+
+.contact-form {
+  input, label, textarea {
+    width: 100%;
+    display: block;
+  }
+  input, textarea, button {
+    padding: .125rem .25rem;
+    margin-bottom: 1rem;
+    text-shadow: none;
+  }
+  button {
+    padding: .125rem 1rem;
+    font-weight: 600;
+    background-color: $primary;
+    color: white;
+  }
+}
