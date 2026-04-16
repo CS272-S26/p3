@@ -1,48 +1,51 @@
-# The Pistols At Dawn Website
+# 🎸 The Pistols At Dawn Website
 
-## About
-This is a simple website I built for a surf rock band called The Pistols at Dawn from Madison, WI.
+## About this project
+This is a simple band website for The Pistols at Dawn, a surf rock band from Madison, WI.
 
-The site includes a few different pages where you can check out videos, see what equipment they use, look at upcoming shows, and contact them.
+The site shows basic info about the band, lets users explore music, videos, equipment, shows, and contact them.
 
-## Pages
-- Home (index.html)  
-  Intro page with basic info about the band
+## Pages in the website
+- **Home (index.html)**  
+  Main page with band intro and description.
 
-- About (about.html)  
-  Just a simple about page (could definitely add more here later)
+- **About (about.html)**  
+  Basic about section (currently simple, can be expanded).
 
-- Listen (listen.html)  
-  Placeholder page for music
+- **Listen (listen.html)**  
+  Page intended for music/audio content.
 
-- Look (look.html)  
-  Has embedded YouTube videos
+- **Look (look.html)**  
+  Contains embedded YouTube videos of the band.
 
-- Equipment (equipment.html)  
-  Shows instruments like guitars and drums
+- **Equipment (equipment.html)**  
+  Shows instruments like guitar and drums used by the band.
 
-- Shows (shows.html)  
-  Lists upcoming performances
+- **Shows (shows.html)**  
+  Displays upcoming performances (example: Crystal Corner, May 2, 2026).
 
-- Contact (contact.html)  
-  Basic contact form
+- **Contact (contact.html)**  
+  Simple contact form for users to send messages.
 
 ## Tech Used
 - HTML
 - CSS / SCSS
-- Bootstrap
+- Bootstrap 5
+- Responsive design with media queries
 
 ## Features
-- Works on both desktop and mobile
-- Navigation bar across pages
+- Navigation bar across all pages
+- Responsive layout (works on phone + desktop)
 - Embedded videos
-- Cards for content sections
-- Contact form
+- Styled cards for content (like shows & equipment)
+- Contact form UI
 
 ## How to Run
-Open index.html in your browser.
+Just open `index.html` in your browser.
+
+No backend needed.
 
 ## Notes
-- Front-end only, no backend
-- Some pages are still pretty basic
-- Styles are in style.css (from SCSS)
+- This is mostly a front-end project
+- Some pages (like Listen/About) are still minimal and can be improved
+- Styling is handled in `style.css` (compiled from SCSS)
