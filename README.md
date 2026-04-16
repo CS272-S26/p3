@@ -1,51 +1,49 @@
 # 🎸 The Pistols At Dawn Website
 
-## About this project
-This is a simple band website for The Pistols at Dawn, a surf rock band from Madison, WI.
+## About
+This project is a simple website for *The Pistols at Dawn*, a surf rock band based in Madison, WI.
 
-The site shows basic info about the band, lets users explore music, videos, equipment, shows, and contact them.
+The goal was to build a clean front-end site where users can learn about the band, watch videos, see their equipment, check upcoming shows, and contact them.
 
-## Pages in the website
+## Pages
 - **Home (index.html)**  
-  Main page with band intro and description.
+  Landing page with a short intro about the band.
 
 - **About (about.html)**  
-  Basic about section (currently simple, can be expanded).
+  Basic info page (can be expanded more later).
 
 - **Listen (listen.html)**  
-  Page intended for music/audio content.
+  Intended for music/audio content.
 
 - **Look (look.html)**  
-  Contains embedded YouTube videos of the band.
+  Includes embedded YouTube videos.
 
 - **Equipment (equipment.html)**  
-  Shows instruments like guitar and drums used by the band.
+  Shows instruments like guitars and drums.
 
 - **Shows (shows.html)**  
   Displays upcoming performances (example: Crystal Corner, May 2, 2026).
 
 - **Contact (contact.html)**  
-  Simple contact form for users to send messages.
+  Simple contact form.
 
 ## Tech Used
-- HTML
-- CSS / SCSS
-- Bootstrap 5
-- Responsive design with media queries
+- HTML  
+- CSS / SCSS  
+- Bootstrap 5  
 
 ## Features
+- Responsive layout (works on desktop and mobile)
 - Navigation bar across all pages
-- Responsive layout (works on phone + desktop)
 - Embedded videos
-- Styled cards for content (like shows & equipment)
+- Styled cards for content
 - Contact form UI
 
 ## How to Run
-Just open `index.html` in your browser.
-
-No backend needed.
+Open `index.html` in your browser.
 
 ## Notes
-- This is mostly a front-end project
-- Some pages (like Listen/About) are still minimal and can be improved
+- This is a front-end only project
+- Some pages (like Listen and About) are still basic and could be expanded
 - Styling is handled in `style.css` (compiled from SCSS)
+
