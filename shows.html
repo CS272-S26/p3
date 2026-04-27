@@ -7,6 +7,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" />
 </head>
+
 <body>
 <header>
     <div class="container-fluid">
@@ -21,16 +22,34 @@
     </nav>
     </div>
 </header>
+
 <main class="container-fluid home-page">
     <div class="home-about-content p-2">
     <h1 class="band-name page-title">Shows</h1>
         <p>The band encourages you to attend their upcoming performances.</p>
-        <div class="card">
-            <h2>Crystal Corner</h2>
-            <p>May 2, 2026</p>
-            <p>9pm</p>
-        </div>
     </div>
 </main>
+ <script>
+ document.addEventListener("DOMContentLoaded", () => {
+ fetch('shows.json').then(res=>res.json()).then(shows=> {
+    const container = document.querySelector('.home-about-content');
+    shows.forEach(show => {
+        const card = document.createElement('div');
+        card.className = 'card mb-4 shadow';
+        card.innerHTML = `
+        <div class = "card-body">
+            <h2 class = "card-title">${show.title}</h2>
+            ${show.venue ? `<p><strong>Venue:</strong> ${show.venue}</p>`:''}
+            ${show.program ? `<p><strong>Program:</strong> ${show.program}</p>`:''}
+            <p><strong>Date:</strong> ${show.date}</p>
+            <p><strong>Time:</strong> ${show.time}</p>
+            <p>${show.description}</p>
+        </div>
+    `;
+    container.appendChild(card);
+    });
+});
+ });
+ </script>
 </body>
 </html>
