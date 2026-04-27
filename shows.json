@@ -1,20 +1,14 @@
 [
   {
-    "title": "20th Anniversary Show",
-    "venue": "The Crystal Corner",
-    "date": "May 2, 2026",
+    "title": "20 Year Anniversary Show",
+    "venue": "Crystal Corner",
     "location": "Madison, Wisconsin",
+    "address": "1302 Williamson Street",
+    "date": "May 2, 2026",
     "time": "9:00 PM",
-    "description": "The band returns to one of its spiritual homes for a 20th anniversary reunion show.",
-    "link": "https://www.facebook.com/share/18Q8U7H9vJ/"
-  },
-  {
-    "title": "Radio Appearance",
-    "program": "Who Cooks For You",
-    "station": "WORT",
-    "host": "The Real Jaguar",
-    "date": "April 24",
-    "time": "3:00 PM",
-    "description": "Live radio appearance ahead of the anniversary show."
+    "price": "$10",
+    "support": "Compact Deluxe, Heart Strings",
+    "description": "The Pistols at Dawn return to the Crystal Corner for their 20 year anniversary show. The night also features Compact Deluxe and Heart Strings, with Kayla Kush from WORT.",
+    "link": "https://www.facebook.com/events/2135036270615980"
   }
 ]
