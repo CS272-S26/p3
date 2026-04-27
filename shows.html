@@ -26,74 +26,34 @@
 <main class="container-fluid home-page">
     <div class="home-about-content p-2">
 
-    <h1 class="band-name page-title">Shows</h1>
+        <h1 class="band-name page-title">Shows</h1>
         <p>The band encourages you to attend their upcoming performances.</p>
 
-        <div class="card mb-4">
-            <div class="card-body">
-                <h2>20th Anniversary Show</h2>
-                <p><strong>Venue:</strong> The Crystal Corner</p>
-                <p><strong>Date:</strong> May 2, 2026</p>
-                <p><strong>Location:</strong> Madison, Wisconsin</p>
-                <p><strong>Time:</strong> 9:00 PM</p>
-                <p>
-                    The band returns to one of its spiritual homes for a 20th anniversary reunion show at the Crystal Corner in Madison.
-                </p>
-                <p>
-                    <a href="https://www.facebook.com/share/18Q8U7H9vJ/" target="_blank" rel="noopener noreferrer">View the event on Facebook</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="card mb-4">
-            <div class="card-body">
-                <h2>Radio Appearance</h2>
-                <p><strong>Program:</strong> <em>Who Cooks For You</em></p>
-                <p><strong>Station:</strong> WORT</p>
-                <p><strong>Host:</strong> The Real Jaguar</p>
-                <p><strong>Date:</strong> Friday, April 24</p>
-                <p><strong>Time:</strong> 3:00 PM</p>
-                <p>
-                    The Pistols at Dawn are appearing live on WORT ahead of the anniversary show and the release of <em>The Halfway House Tapes</em>.
-                </p>
-            </div>
-        </div>
-
-        <div class="card mb-4">
-            <div class="card-body">
-                <h2>Follow for Updates</h2>
-                <p>
-                    For the latest show announcements, streaming news, and other updates, follow the band on Facebook.
-                </p>
-                <p>
-                    <a href="https://facebook.com/thepistolsatdawn" target="_blank" rel="noopener noreferrer">facebook.com/thepistolsatdawn</a>
-                </p>
-            </div>
-        </div>
->>>>>>> 648f943d8fb0f30b4bd35fd5c98e6747001a1904
     </div>
 </main>
- <script>
- document.addEventListener("DOMContentLoaded", () => {
- fetch('shows.json').then(res=>res.json()).then(shows=> {
-    const container = document.querySelector('.home-about-content');
-    shows.forEach(show => {
-        const card = document.createElement('div');
-        card.className = 'card mb-4 shadow';
-        card.innerHTML = `
-        <div class = "card-body">
-            <h2 class = "card-title">${show.title}</h2>
-            ${show.venue ? `<p><strong>Venue:</strong> ${show.venue}</p>`:''}
-            ${show.program ? `<p><strong>Program:</strong> ${show.program}</p>`:''}
-            <p><strong>Date:</strong> ${show.date}</p>
-            <p><strong>Time:</strong> ${show.time}</p>
-            <p>${show.description}</p>
-        </div>
-    `;
-    container.appendChild(card);
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('shows.json').then(res=>res.json()).then(shows=> {
+        const container = document.querySelector('.home-about-content');
+        shows.forEach(show => {
+            const card = document.createElement('div');
+            card.className = 'card mb-4 shadow';
+            card.innerHTML = `
+            <div class = "card-body">
+                <h2 class = "card-title">${show.title}</h2>
+                ${show.venue ? `<p><strong>Venue:</strong> ${show.venue}</p>`:''}
+                ${show.program ? `<p><strong>Program:</strong> ${show.program}</p>`:''}
+                <p><strong>Date:</strong> ${show.date}</p>
+                <p><strong>Time:</strong> ${show.time}</p>
+                <p>${show.description}</p>
+            </div>
+        `;
+        container.appendChild(card);
+        });
     });
 });
- });
- </script>
+</script>
+
 </body>
 </html>
