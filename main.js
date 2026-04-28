@@ -71,7 +71,7 @@ function createWelcome() {
 
     let formClear = document.createElement('button');
     formClear.setAttribute("id", "nameFormClearButton")
-    formClear.innerText = "Clear Saved Name";
+    formClear.innerText = "Reset";
 
     formClear.addEventListener('click',clearName)
 

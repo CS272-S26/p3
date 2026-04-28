@@ -15,18 +15,22 @@ body {
 #nameContainer p,
 #nameFormContainer p {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1rem !important;
   margin-bottom: 1rem !important;
 }
 #nameContainer label, #nameContainer input,
 #nameFormContainer label,
 #nameFormContainer input {
   display: block;
+  padding: 0.25rem 0.5rem;
+  color: black !important;
+  text-shadow: none;
 }
 #nameContainer label,
 #nameFormContainer label {
   margin-bottom: 0.25rem;
-  color: white;
+  padding-left: 0;
+  color: white !important;
 }
 #nameContainer submit,
 #nameContainer button,
@@ -34,6 +38,7 @@ body {
 #nameFormContainer button {
   display: inline-block;
   padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
   margin: 0.5rem;
   margin-left: 0;
   color: white;

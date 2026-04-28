@@ -31,22 +31,27 @@ body {
   color: white;
   p {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem!important;
 
     margin-bottom: 1rem!important;
   }
 
   label, input {
     display: block;
+    padding: .25rem .5rem;
+    color:black!important;
+    text-shadow: none;
   }
   label {
     margin-bottom: .25rem;
-    color: white;
+    padding-left: 0;
+    color: white!important;
   }
   submit,
   button {
     display: inline-block;
     padding: .25rem .5rem;
+    font-size: .8rem;
     margin: .5rem;
     margin-left: 0;
     color: white;
