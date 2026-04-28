@@ -1,10 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&Alumni+Sans+Inline+One:ital@0;1&family=National+Park:wght@200..800&family=New+Rocker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 body {
   min-height: 100vh;
   background-size: 100% 100%, cover;
   background-image: linear-gradient(130deg, hsla(0, 0%, 5%, 0.875), hsla(0, 0%, 1%, 0.875)), url("images/home-image.png");
   background-repeat: no-repeat;
 }
+#nameContainer,
+#nameFormContainer {
+  padding: 0.5rem;
+  display: inline-block;
+  border: 2px solid hsl(205, 10%, 30%);
+  color: white;
+}
+#nameContainer p,
+#nameFormContainer p {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1rem !important;
+}
+#nameContainer label, #nameContainer input,
+#nameFormContainer label,
+#nameFormContainer input {
+  display: block;
+}
+#nameContainer label,
+#nameFormContainer label {
+  margin-bottom: 0.25rem;
+  color: white;
+}
+#nameContainer submit,
+#nameContainer button,
+#nameFormContainer submit,
+#nameFormContainer button {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin: 0.5rem;
+  margin-left: 0;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 0.125rem;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
