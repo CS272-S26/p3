@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", function() {
 function createNameForm() {
     let header = document.querySelector('header');
 
+    let nameForm = document.querySelector("#nameContainer");
+    if(nameForm) {
+        nameForm.remove();
+    }
+
     let form = document.createElement('input')
     form.setAttribute('id', "nameFormEntry");
 
@@ -64,8 +69,15 @@ function createWelcome() {
     let messageLine2 = document.createElement('p');
     messageLine2.innerText = "May your trip through our site bring you knowledge and good fortune."
 
+    let formClear = document.createElement('button');
+    formClear.setAttribute("id", "nameFormClearButton")
+    formClear.innerText = "Clear Saved Name";
+
+    formClear.addEventListener('click',clearName)
+
     nameContainer.appendChild(messageLine1);
     nameContainer.appendChild(messageLine2);
+    nameContainer.appendChild(formClear);
 
     nameContainer.classList.add('m-4');
     nameContainer.classList.add('mt-2');
