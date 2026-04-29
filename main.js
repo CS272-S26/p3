@@ -1,8 +1,10 @@
+
+// Make sure the page is loaded before kicking off any JS
 document.addEventListener("DOMContentLoaded", function() {
-    // alert("Hey!");
+
     let header = document.querySelector('header');
+    // We only want to build the name entry form if there is a header to append it to
     if(header) {
-        // console.log("Header found");
         let savedName = localStorage.getItem('userName');
         console.log(savedName);
         if(sessionStorage.getItem('hideForThisVisit') != 'true') {
@@ -12,24 +14,24 @@ document.addEventListener("DOMContentLoaded", function() {
             else {
                 createWelcome();
             }
-
         }
-
     }
     else {
         console.log("Header must be present to load custom text");
-
     }
 })
 
+// Create the form for users to enter their preferred name, which will be used at the top of each page
 function createNameForm() {
     let header = document.querySelector('header');
 
     let nameForm = document.querySelector("#nameContainer");
+    // If the form element is already there, we want to remove it before we create the form.
     if(nameForm) {
         nameForm.remove();
     }
 
+    // Build out all the elements and set their corresponding ID and CSS classes where relevant
     let form = document.createElement('input')
     form.setAttribute('id', "nameFormEntry");
 
@@ -51,6 +53,7 @@ function createNameForm() {
     formContainer.classList.add('mt-2');
     formContainer.classList.add('card');
 
+    // Actually add the pieces to the container and the container to the header element
     formContainer.appendChild(formLabel);
     formContainer.appendChild(form);
     formContainer.appendChild(formSubmit);
@@ -58,6 +61,7 @@ function createNameForm() {
 
     header.appendChild(formContainer);
 
+    // Enable the click functionality to enter or reset the user's name
     formSubmit.addEventListener('click', function() {
         localStorage.setItem('userName', form.value);
         createWelcome();
@@ -68,37 +72,47 @@ function createNameForm() {
     })
 }
 
+// Create the form to display the user's name and custom page string
 function createWelcome() {
+
+    // If the name entry form container is on the page, remove it before beginning
     let nameFormContainer = document.querySelector("#nameFormContainer");
         if(nameFormContainer) {
             nameFormContainer.remove();
         }
+
+    // Create or query the relevant elements
     let nameContainer = document.createElement('div');
         nameContainer.setAttribute("id", "nameContainer");
     let header = document.querySelector('header');
 
+    // If the user doesn't have a name saved or if they've saved a blank string, user gets called "Stranger"
     let name = '';
     if(localStorage.getItem('userName').trim() == '') {
         name = "Stranger"
     }
+    // Otherwise, use the locally saved name. Makes the first letter uppercase and the rest of the name lowercase.
     else {
         name = localStorage.getItem('userName').trim().substring(0,1).toLocaleUpperCase() +
             localStorage.getItem('userName').trim().substring(1,localStorage.getItem('userName').length);
     }
 
-    let messageLine1 = document.createElement("p");
-    messageLine1.innerText = "Hello, "+name + "."
+    // let messageLine1 = document.createElement("p");
+    // messageLine1.innerText = "Hello, "+name + "."
     let messageLine2 = document.createElement('p');
-    // messageLine2.innerText = "May your trip through our site bring you knowledge and good fortune."
+
+    // Create the page welcome string based on which page the user is on
     messageLine2.innerText = name + ', ' + getPageIntroduction();
 
+    // Enable clearing the local storage to enable reset
     let formClear = document.createElement('button');
     formClear.setAttribute("id", "nameFormClearButton")
     formClear.innerText = "Reset my name";
 
+    // Clear the name if the user clicks the reset button
     formClear.addEventListener('click',clearName)
 
-    // nameContainer.appendChild(messageLine1);
+    // Add the items to the respective container and the container to the page
     nameContainer.appendChild(messageLine2);
     nameContainer.appendChild(formClear);
 
@@ -107,21 +121,24 @@ function createWelcome() {
     nameContainer.classList.add('card');
 
     header.appendChild(nameContainer)
-
 }
+
+// Clear locally stored name and reset the create form
 function clearName() {
     localStorage.clear();
     createNameForm()
 }
 
+// Use the current page URL to identify which message to use
 function getPageIntroduction() {
-    // If we're at index.html
+    // If we're at index.html, use the default phrase
     if(window.location.href.charAt(window.location.href.length-1) == '/'
     || window.location.href.indexOf('index.html') > 0
     )
     {
         return 'May your trip through our site bring you knowledge and good fortune.'
     }
+    // Otherwise, iterate through the list of pages and use the corresponding phrase if that page is found
     else {
         for(page in pages) {
             if(window.location.href.indexOf(page) > 0) {
@@ -131,6 +148,7 @@ function getPageIntroduction() {
     }
 }
 
+// The data for the welcome page
 let pages = {
     'about.html': 'let this page enlighten you about the history of the Pistols.'
     , 'listen.html' : 'please use this page to listen to the music of the band.'
@@ -140,7 +158,7 @@ let pages = {
     , 'contact.html' : 'please share your thoughts and feelings with the Pistols'
 };
 
-
+// Handles the contact form functionality on the Contact page
 document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.querySelector("#contact-form");
 
