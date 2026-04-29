@@ -9,7 +9,6 @@ $light: hsl(215, 100%, 97%);
 
 body {
   min-height: 100vh;
-  //linear-gradient(10deg, blue 50%, green 100%)
 ;
   background-size: 100% 100%, cover;
   background-image:
@@ -47,7 +46,7 @@ body {
     padding-left: 0;
     color: white!important;
   }
-  submit,
+
   button {
     display: inline-block;
     padding: .25rem .5rem;
@@ -59,9 +58,16 @@ body {
     background-color: transparent;
     border-radius: .125rem;
   }
+  #nameFormHideButton {
+    float: right;
+    font-size: .75rem;
+    color: $accent!important;
+    border: $accent;
+  }
 }
 * {
   box-sizing: border-box;
+  transition: .2s all;
 }
 
 *,

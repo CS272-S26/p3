@@ -32,9 +32,7 @@ body {
   padding-left: 0;
   color: white !important;
 }
-#nameContainer submit,
 #nameContainer button,
-#nameFormContainer submit,
 #nameFormContainer button {
   display: inline-block;
   padding: 0.25rem 0.5rem;
@@ -46,10 +44,19 @@ body {
   background-color: transparent;
   border-radius: 0.125rem;
 }
+#nameContainer #nameFormHideButton,
+#nameFormContainer #nameFormHideButton {
+  float: right;
+  font-size: 0.75rem;
+  color: hsl(205, 10%, 30%) !important;
+  border: hsl(205, 10%, 30%);
+}
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
 }
 
 *,
