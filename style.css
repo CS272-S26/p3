@@ -1,65 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-body {
-  min-height: 100vh;
-  background-size: 100% 100%, cover;
-  background-image: linear-gradient(130deg, hsla(0, 0%, 5%, 0.875), hsla(0, 0%, 1%, 0.875)), url("images/home-image.png");
-  background-repeat: no-repeat;
-}
-#nameContainer,
-#nameFormContainer {
-  padding: 0.5rem;
-  display: inline-block;
-  border: 2px solid hsl(205, 10%, 30%);
-  color: white;
-}
-#nameContainer p,
-#nameFormContainer p {
-  display: block;
-  font-size: 1rem !important;
-  margin-bottom: 1rem !important;
-}
-#nameContainer label, #nameContainer input,
-#nameFormContainer label,
-#nameFormContainer input {
-  display: block;
-  padding: 0.25rem 0.5rem;
-  color: black !important;
-  text-shadow: none;
-}
-#nameContainer label,
-#nameFormContainer label {
-  margin-bottom: 0.25rem;
-  padding-left: 0;
-  color: white !important;
-}
-#nameContainer button,
-#nameFormContainer button {
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8rem;
-  margin: 0.5rem;
-  margin-left: 0;
-  color: white;
-  border: 1px solid white;
-  background-color: transparent;
-  border-radius: 0.125rem;
-}
-#nameContainer #nameFormHideButton,
-#nameFormContainer #nameFormHideButton {
-  float: right;
-  font-size: 0.75rem;
-  color: hsl(205, 10%, 30%) !important;
-  border: hsl(205, 10%, 30%);
-}
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: 0.2s all;
+  box-sizing: border-box;
   transition: 0.2s all;
 }
 
-*,
+body {
+  min-height: 100vh;
+  background-size: 100% 100%, cover;
+  background-image:
+    linear-gradient(130deg, hsla(0, 0%, 5%, 0.875), hsla(0, 0%, 1%, 0.875)),
+    url("images/home-image.png");
+  background-repeat: no-repeat;
+}
+
 body,
 h1,
 h2,
@@ -73,76 +27,13 @@ nav a {
   text-shadow: 1px 1px 2px black;
 }
 
-div.card {
-  background: -webkit-gradient(linear, right top, left top, from(hsla(205, 20%, 10%, 0.79)), to(hsla(205, 20%, 20%, 0.79)));
-  background: linear-gradient(-90deg, hsla(205, 20%, 10%, 0.79), hsla(205, 20%, 20%, 0.79));
-}
-div.card * {
-  text-shadow: 0.25vw 0.125vw 0.1vw #222;
-  color: hsl(35, 0%, 856%) !important;
-  color: hsl(215, 100%, 97%) !important;
-}
-div.card p, div.card figcaption, div.card h1, div.card h2, div.card h3 {
-  letter-spacing: 1.5px;
-  font-weight: 600;
-}
-
-.navbar {
-  width: 50%;
-  margin: 0 auto;
-  width: 100%;
-}
-.navbar a {
-  font-size: 3vw;
+.home-about-content {
   color: white;
-  text-decoration: none;
-  text-align: right;
-  font-weight: 600;
-  text-shadow: 1px 1px 2px black;
-}
-.navbar a.nav-active {
-  color: hsl(205, 10%, 30%);
-}
-
-@media screen and (max-width: 700px) and (min-width: 0px) {
-  h1, h2, h3, h4 {
-    font-size: 10vw;
-  }
-  div.card h1, div.card h2, div.card h3, div.card h4 {
-    font-size: 8vw;
-  }
-  p {
-    font-size: 4vw;
-  }
-}
-@media screen and (min-width: 701px) and (max-width: 1500px) {
-  h1 {
-    font-size: 10vw;
-  }
-  h2, h3, h4 {
-    font-size: 5vw;
-  }
-  p {
-    font-size: 2vw;
-  }
-}
-@media screen and (min-width: 1501px) {
-  .card {
-    padding: 1vw 2vw;
-  }
-  p {
-    font-size: 2.5vw;
-  }
-}
-.card {
-  padding: 1vw 2vw;
 }
 
 h1.band-name,
 h1.page-title {
   font-size: 10vw;
-  color: white;
-  color: hsl(35, 0%, 856%);
   color: hsl(215, 100%, 97%);
   font-weight: 400;
   font-style: normal;
@@ -152,22 +43,207 @@ h1.page-title {
   font-size: 3vw;
 }
 
-.home-about-content {
+/* Navigation */
+
+.navbar {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navbar a {
+  font-size: 3vw;
+  color: white;
+  text-decoration: none;
+  text-align: right;
+  font-weight: 600;
+}
+
+.navbar a.nav-active {
+  color: hsl(205, 10%, 30%);
+}
+
+/* Cards */
+
+.card {
+  padding: 1vw 2vw;
+}
+
+div.card {
+  background: linear-gradient(-90deg, hsla(205, 20%, 10%, 0.79), hsla(205, 20%, 20%, 0.79));
+}
+
+div.card * {
+  color: hsl(215, 100%, 97%);
+  text-shadow: 0.25vw 0.125vw 0.1vw #222;
+}
+
+div.card p,
+div.card figcaption,
+div.card h1,
+div.card h2,
+div.card h3 {
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+/* Welcome/name banner */
+
+#nameContainer,
+#nameFormContainer {
+  padding: 0.5rem;
+  display: inline-block;
+  border: 2px solid hsl(205, 10%, 30%);
   color: white;
 }
 
-.contact-form input, .contact-form label, .contact-form textarea {
+#nameContainer p,
+#nameFormContainer p {
+  display: block;
+  font-size: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+#nameContainer label,
+#nameFormContainer label {
+  display: block;
+  margin-bottom: 0.25rem;
+  padding-left: 0;
+  color: white !important;
+}
+
+#nameContainer input,
+#nameFormContainer input {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  color: black !important;
+  background-color: white;
+  text-shadow: none;
+}
+
+#nameContainer button,
+#nameFormContainer button {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 0.125rem;
+}
+
+#nameContainer #nameFormHideButton,
+#nameFormContainer #nameFormHideButton {
+  float: right;
+  font-size: 0.75rem;
+  color: hsl(205, 10%, 30%) !important;
+  border: 1px solid hsl(205, 10%, 30%);
+}
+
+/* Forms: keep inputs readable and plain */
+
+.form-control,
+.form-control:focus,
+input,
+textarea {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  text-shadow: none !important;
+  font-family: Arial, sans-serif !important;
+}
+
+.form-label,
+label {
+  text-shadow: none;
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+  text-shadow: none;
+}
+
+.contact-form input,
+.contact-form label,
+.contact-form textarea {
   width: 100%;
   display: block;
 }
-.contact-form input, .contact-form textarea, .contact-form button {
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
   padding: 0.125rem 0.25rem;
   margin-bottom: 1rem;
   text-shadow: none;
 }
+
 .contact-form button {
   padding: 0.125rem 1rem;
   font-weight: 600;
   background-color: hsl(0, 0%, 5%);
   color: white;
+}
+
+/* Override card-wide white text rule inside form fields */
+
+div.card input,
+div.card textarea,
+div.card .form-control {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+div.card label,
+div.card .form-label {
+  color: hsl(215, 100%, 97%) !important;
+  text-shadow: none !important;
+}
+
+/* Responsive type */
+
+@media screen and (max-width: 700px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 10vw;
+  }
+
+  div.card h1,
+  div.card h2,
+  div.card h3,
+  div.card h4 {
+    font-size: 8vw;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1500px) {
+  h1 {
+    font-size: 10vw;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: 5vw;
+  }
+
+  p {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 1501px) {
+  .card {
+    padding: 1vw 2vw;
+  }
+
+  p {
+    font-size: 2.5vw;
+  }
 }

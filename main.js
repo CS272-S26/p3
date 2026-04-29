@@ -139,3 +139,58 @@ let pages = {
     , 'shows.html' : 'are you interested in experiencing the Pistols live? Use this page to plan your showgoing adventures.'
     , 'contact.html' : 'please share your thoughts and feelings with the Pistols'
 };
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.querySelector("#contact-form");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nameInput = document.querySelector("#name-input");
+            const emailInput = document.querySelector("#email-input");
+            const commentInput = document.querySelector("#comment-input");
+            const responseBox = document.querySelector("#contact-response");
+
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const message = commentInput.value.trim();
+
+            if (name === "" || email === "" || message === "") {
+                responseBox.innerText = "Please complete all fields before submitting.";
+                return;
+            }
+
+            localStorage.setItem("lastContactName", name);
+            localStorage.setItem("lastContactEmail", email);
+
+            responseBox.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Message Preview</h2>
+                        <p><strong>Name:</strong> ${name}</p>
+                        <p><strong>Email:</strong> ${email}</p>
+                        <p><strong>Message:</strong> ${message}</p>
+                        <p>
+                            Thanks, ${name}. This demo form shows how your message would be prepared.
+                            To send it for real, email us at
+                            <a href="mailto:thepistolsatdawn@gmail.com">thepistolsatdawn@gmail.com</a>.
+                        </p>
+                    </div>
+                </div>
+            `;
+        });
+
+        const savedName = localStorage.getItem("lastContactName");
+        const savedEmail = localStorage.getItem("lastContactEmail");
+
+        if (savedName) {
+            document.querySelector("#name-input").value = savedName;
+        }
+
+        if (savedEmail) {
+            document.querySelector("#email-input").value = savedEmail;
+        }
+    }
+});
